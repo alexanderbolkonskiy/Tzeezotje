@@ -156,130 +156,15 @@ export function swiper() {
 	});
 }
 
-
-
-export const modal = () => {
-	// Получаем родительский элемент для вставки модальных окон
-	const parent = document.body;
-
-	// Получаем элемент html документа
-	const html = document.querySelector("html");
-
-	// Класс для закрытия модального окна
-	const modalExitClass = ".modal-exit";
-
-	// Класс для открытого модального окна
-	const modalOpenClass = "modal_open";
-
-	// Атрибут для определения модального окна
-	const dataModalAttr = "data-modal";
-
-	const showModal = (modal) => {
-		const animationDuration = 300;
-		modal.style.display = "block";
-		modal.animate(
-			{
-				opacity: [0, 1],
-				transform: ["translate(-50%, -50%) scale(0.8) ", "translate(-50%, -50%) scale(1) "],
-			},
-			{ duration: animationDuration, easing: "cubic-bezier(0.55, 0.055, 0.675, 0.19)" }
-		);
-	};
-
-	const hideModal = (modal) => {
-		const animationDuration = 300;
-
-		const animation = modal.animate(
-			{
-				opacity: [1, 0],
-				transform: ["translate(-50%, -50%) scale(1)", "translate(-50%, -50%) scale(0.8)"],
-			},
-			{ duration: animationDuration, easing: "cubic-bezier(0.55, 0.055, 0.675, 0.19)" }
-		);
-
-		animation.onfinish = () => {
-			modal.style.display = "none";
-		};
-	};
-
-	// Функция для закрытия модального окна
-	const handleExit = (event, modal) => {
-		event.preventDefault();
-
-		// Удаляем класс модального окна, чтобы скрыть его
-		hideModal(modal);
-		hideOverlay();
-
-		// Восстанавливаем прокрутку страницы
-		html.classList.remove(".no-scroll");
-	};
-
-	// Функция для открытия модального окна
-	const handleTrigger = (event) => {
-		event.preventDefault();
-
-		// Получаем триггер, который вызвал открытие модального окна
-		const trigger = event.target.closest(`[${dataModalAttr}]`);
-
-		// Если триггер не найден, выходим из функции
-		if (!trigger) {
-			return;
-		}
-
-		// Получаем модальное окно по его атрибуту data-modal
-		const modal = document.getElementById(trigger.dataset.modal);
-
-		showModal(modal);
-		showOverlay();
-		// Добавляем класс открытого модального окна для его отображения
-
-		// Останавливаем прокрутку страницы, чтобы не прокручивалась за модальным окном
-		html.classList.add("no-scroll");
-
-		// Получаем все элементы, при нажатии на которые модальное окно должно закрываться
-		const exits = modal.querySelectorAll(modalExitClass);
-
-		// Добавляем обработчики клика для каждого элемента, закрывающего модальное окно
-		exits.forEach((exit) => {
-			exit.addEventListener("click", (event) => {
-				handleExit(event, modal);
-			});
-		});
-	};
-
-	// Функция обработки клика на странице
-	const handleClick = (event) => {
-		const target = event.target;
-		const overlay = document.querySelector(".t-overlay");
-
-		// Если клик произошел на элементе с атрибутом data-modal, вызываем функцию для открытия модального окна
-		if (target.closest(`[${dataModalAttr}]`)) {
-			handleTrigger(event);
-			const modal = target;
-		}
-
-	};
-
-	// Добавляем обработчик клика на родительский элемент
-	parent.addEventListener("click", handleClick);
-
-	// Делегирование события на документе для обработки кликов на динамически добавленных элементах
-	document.addEventListener("click", (event) => {
-		if (event.target.closest(`[${dataModalAttr}]`)) {
-			handleTrigger(event);
-		}
-	});
-};
-
 export const myModal = () => {
 	const html = document.querySelector("html");
 	const btns = document.querySelectorAll("[data-modal]");
-	const closeBtn = document.querySelectorAll(".close-btn");
+	const closeBtn = document.querySelectorAll(".modal-close-btn");
 	const modals = document.querySelectorAll(".modal");
 	closeBtn.forEach((btn) => {
 		btn.addEventListener("click", function () {
 			let modal = this.closest(".modal");
-			if (modal.classList.contains("modal--open")) {
+			if (modal.classList.contains("modal-open")) {
 				hideModal(modal);
 				hideOverlay();
 			}
@@ -288,7 +173,7 @@ export const myModal = () => {
 
 	overlay.addEventListener("click", function () {
 		modals.forEach((modal) => {
-			if (modal.classList.contains("modal--open")) {
+			if (modal.classList.contains("modal-open")) {
 				hideModal(modal);
 				hideOverlay();
 			}
@@ -310,7 +195,7 @@ export const myModal = () => {
 	const showModal = (modal) => {
 		const animationDuration = 300;
 		modal.style.display = "block";
-		modal.classList.add("modal--open");
+		modal.classList.add("modal-open");
 		html.classList.add('no-scroll');
 		modal.animate(
 			{
@@ -334,12 +219,10 @@ export const myModal = () => {
 
 		animation.onfinish = () => {
 			modal.style.display = "none";
-			modal.classList.remove("modal--open");
+			modal.classList.remove("modal-open");
 		};
 	};
 };
-
-
 
 export function sendForm() {
 	let forms = document.querySelectorAll(".t-form");
@@ -502,7 +385,6 @@ export function sendForm() {
 		}
 	}
 }
-
 
 export const isDesktop = () => {
 	return window.innerWidth >= 992;

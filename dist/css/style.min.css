@@ -5557,7 +5557,7 @@ html.menu-open .mob-menu {
 .mob-menu .menu-item {
   margin-bottom: 2em;
 }
-.mob-menu .close-btn {
+.mob-menu .t-close-btn {
   width: 40px;
   height: 40px;
   position: absolute;
@@ -5578,7 +5578,7 @@ html.menu-open .mob-menu {
   display: none;
   z-index: 1000;
 }
-.modal .close-btn {
+.modal .t-close-btn {
   width: 30px;
   height: 30px;
   position: absolute;
@@ -5586,7 +5586,7 @@ html.menu-open .mob-menu {
   top: 0;
 }
 
-.close-btn {
+.t-close-btn {
   display: inline-block;
   border: none;
   background-color: #e4e4e4;
@@ -5594,7 +5594,7 @@ html.menu-open .mob-menu {
   border: none;
   z-index: 1000;
 }
-.close-btn::before {
+.t-close-btn::before {
   content: "";
   width: 2px;
   height: 80%;
@@ -5604,7 +5604,7 @@ html.menu-open .mob-menu {
   transform: translate(-50%, -50%) rotate(45deg);
   background-color: var(--white);
 }
-.close-btn::after {
+.t-close-btn::after {
   content: "";
   width: 2px;
   height: 80%;
