@@ -5161,7 +5161,7 @@ button {
 }
 
 .icon-md {
-  width: 36px;
+  width: 30px;
 }
 
 .icon-xl {
@@ -5282,7 +5282,7 @@ h3.t-title {
   transition: top 500ms var(--cubic-bezier);
   color: var(--black);
   z-index: 900;
-  border-bottom: 1px solid var(--black);
+  border-bottom: 1px solid #c9c9c9;
 }
 @media only screen and (min-width: 767.98px) {
   .header.header--fixed {
@@ -5317,12 +5317,18 @@ h3.t-title {
 }
 
 .main-section {
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 1400px;
   background: rgba(0, 0, 0, 0.5) url("../img/main-bg.jpg") no-repeat center/cover;
   padding: var(--header-height) 0;
 }
 .main-section h3.t-title {
   letter-spacing: 1.44px;
+}
+@media only screen and (min-width: 991.98px) {
+  .main-section {
+    min-height: 680px;
+  }
 }
 
 .menu-section {
@@ -5525,8 +5531,10 @@ h3.t-title {
   display: none;
 }
 
-html.menu-open .mob-menu {
-  transform: translateX(0);
+@media only screen and (max-width: 1199.98px) {
+  html.menu-open .mob-menu {
+    transform: translateX(0);
+  }
 }
 
 .mob-menu {
@@ -5535,7 +5543,7 @@ html.menu-open .mob-menu {
   top: 0;
   right: 0;
   z-index: 980;
-  width: 320px;
+  width: 100vw;
   background-color: var(--white);
   transition: 300ms var(--cubic-bezier);
   transform: translateX(100%);
@@ -5564,6 +5572,11 @@ html.menu-open .mob-menu {
   position: absolute;
   left: 0;
   top: 0;
+}
+@media only screen and (min-width: 575.98px) {
+  .mob-menu {
+    width: 400px;
+  }
 }
 
 .modal {

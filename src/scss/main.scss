@@ -213,7 +213,7 @@ button {
 
 
 .icon-md {
-	width: 36px;
+	width: 30px;
 }
 
 .icon-xl {
@@ -344,7 +344,7 @@ h3.t-title {
 		transition: top 500ms var(--cubic-bezier);
 		color: var(--black);
 		z-index: 900;
-		border-bottom: 1px solid var(--black);
+		border-bottom: 1px solid #c9c9c9;
 		.menu {
 			.menu-item {
 				&::before {
@@ -382,12 +382,16 @@ h3.t-title {
 }
 
 .main-section {
-	min-height: 100vh;
+	height: 100vh;
+	max-height: 1400px;
 	background: rgba(0, 0, 0, 0.5) url("../img/main-bg.jpg") no-repeat center/cover;
 	padding: var(--header-height) 0;
 
 	h3.t-title {
 		letter-spacing: 1.44px;
+	}
+	@include media ('min','lg'){
+		min-height: 680px;
 	}
 }
 
@@ -579,9 +583,14 @@ h3.t-title {
 }
 
 html.menu-open {
-	.mob-menu {
-		transform: translateX(0);
+	@include media ('max','xl'){
+		.mob-menu {
+			transform: translateX(0);
+		}
+	
 	}
+
+
 }
 
 .mob-menu {
@@ -590,7 +599,7 @@ html.menu-open {
 	top: 0;
 	right: 0;
 	z-index: 980;
-	width: 320px;
+	width: 100vw;
 	background-color: var(--white);
 	transition: 300ms var(--cubic-bezier);
 	transform: translateX(100%);
@@ -618,6 +627,9 @@ html.menu-open {
 		position: absolute;
 		left: 0;
 		top: 0;
+	}
+	@include media ('min','sm'){
+		width: 400px;
 	}
 }
 
