@@ -5155,10 +5155,16 @@ button {
   border: 2px solid var(--main-color);
 }
 
-.icon-call, .icon-instagram, .icon-vk, .icon-facebook {
+.icon-sm {
   width: 24px;
-  height: 24px;
-  display: block;
+}
+
+.icon-md {
+  width: 36px;
+}
+
+.icon-xl {
+  width: 84px;
 }
 
 h1.t-title {
@@ -5611,7 +5617,7 @@ html.menu-open .mob-menu {
 
 .t-input {
   padding: 1em 0.5em;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #cccccc;
   width: 100%;
   max-width: 100%;
 }

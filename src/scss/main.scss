@@ -18,8 +18,8 @@ html {
 	&.no-scroll {
 		overflow-y: hidden;
 	}
-
 }
+
 body {
 	font-size: 16px;
 	font-family: "Poppins", sans-serif;
@@ -31,9 +31,11 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+
 .text-center {
 	text-align: center;
 }
+
 .text-mob-center {
 	text-align: center;
 	@include media("min", "md") {
@@ -200,14 +202,21 @@ button {
 		border: 2px solid transparent;
 		&:hover {
 			border: 2px solid var(--main-color);
-		} 
+		}
 	}
 }
 
-.icon-call, .icon-instagram, .icon-vk, .icon-facebook {
+.icon-sm {
 	width: 24px;
-	height: 24px;
-	display: block;
+}
+
+
+.icon-md {
+	width: 36px;
+}
+
+.icon-xl {
+	width: 84px;
 }
 
 h1.t-title {
@@ -569,11 +578,9 @@ h3.t-title {
 }
 
 html.menu-open {
-	
 	.mob-menu {
 		transform: translateX(0);
 	}
-
 }
 
 .mob-menu {
@@ -645,34 +652,34 @@ html.menu-open {
 	border: none;
 	z-index: 1000;
 	&::before {
-		content: '';
+		content: "";
 		width: 2px;
 		height: 80%;
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%,-50%) rotate(45deg);
+		transform: translate(-50%, -50%) rotate(45deg);
 		background-color: var(--white);
 	}
 	&::after {
-		content: '';
+		content: "";
 		width: 2px;
 		height: 80%;
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%,-50%) rotate(-45deg);
+		transform: translate(-50%, -50%) rotate(-45deg);
 		background-color: var(--white);
 	}
 }
 
-
 .t-input {
 	padding: 1em 0.5em;
-	border: 1px solid #CCCCCC;
+	border: 1px solid #cccccc;
 	width: 100%;
 	max-width: 100%;
-	&:active,&:focus {
+	&:active,
+	&:focus {
 		border: 1px solid var(--main-color);
 		outline: none;
 	}
@@ -688,8 +695,8 @@ html.menu-open {
 	padding: 20px 20px 60px;
 	width: 290px;
 	position: relative;
-	
-	@include media ('min','sm'){
+
+	@include media("min", "sm") {
 		width: 420px;
 		padding: 40px 40px 60px;
 	}
@@ -717,7 +724,7 @@ html.menu-open {
 		left: 0;
 		height: 100%;
 		background-color: var(--white);
-	
+
 		justify-content: center;
 		align-items: center;
 		display: none;
@@ -727,24 +734,17 @@ html.menu-open {
 			display: flex;
 		}
 	}
-
 }
 
-
-
-
-
-
 .dots {
-   width: 56px;
-   height: 13.4px;
-   background: radial-gradient(circle closest-side,var(--main-color) 90%,#0000) 0 0/33% 100% no-repeat;
-   animation: dots-9e862z 1s steps(3) infinite;
+	width: 56px;
+	height: 13.4px;
+	background: radial-gradient(circle closest-side, var(--main-color) 90%, #0000) 0 0/33% 100% no-repeat;
+	animation: dots-9e862z 1s steps(3) infinite;
 }
 
 @keyframes dots-9e862z {
-   to {
-      background-position: 150% 0;
-   }
+	to {
+		background-position: 150% 0;
+	}
 }
-
