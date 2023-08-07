@@ -9,13 +9,11 @@ export const svgSpriteTask = () => {
 		)
 		.pipe(svgSprite({
 			mode: {
-				symbol: {
-					sprite: `icons.svg`,
-					example: true,
-					dest: '',
-					prefix: '.icon-%s',
-					dimensions: "%s"
-				},	
+				stack: {
+					sprite: `../icons/icons.svg`,
+					// Создавать страницу с перечнем иконок
+					example: true
+				}
 			},shape: {
 				dimension: {
 				  maxWidth: 40,
