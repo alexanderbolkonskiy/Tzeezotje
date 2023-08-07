@@ -4956,6 +4956,7 @@ button.swiper-pagination-bullet {
   --black: #000;
   --violet-blue: #3a4574;
   --gold: #d3b47f;
+  --red: #af3434;
   --light-grey: #e7e7e7;
   --main-color: var(--violet-blue);
   --secondary-color: var(--gold);
@@ -5629,13 +5630,14 @@ html.menu-open .mob-menu {
   box-shadow: inset 0 0 0 50px #eeeeee;
 }
 .t-input._error {
-  border: 1px solid red;
+  border: 1px solid var(--red);
 }
 
 .t-form {
   padding: 20px 20px 60px;
   width: 290px;
   position: relative;
+  overflow: hidden;
 }
 @media only screen and (min-width: 575.98px) {
   .t-form {
@@ -5651,12 +5653,17 @@ html.menu-open .mob-menu {
   padding: 0.5em;
   color: var(--white);
   text-align: center;
+  transform: translateY(100%);
+  transition: transform 200ms var(--cubic-bezier);
 }
 .t-form .t-message._error {
-  background-color: red;
+  background-color: var(--red);
 }
 .t-form .t-message._ok {
   background-color: var(--main-color);
+}
+.t-form .t-message.message_show {
+  transform: translateY(0);
 }
 .t-form__overlay {
   position: absolute;
