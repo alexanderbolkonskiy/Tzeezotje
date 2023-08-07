@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.min.css" />
+		<title>Tzeezotje</title>
+	</head>
+
+	<body class="body">
+		<header class="header d-flex">
+			<div class="container mt-auto">
+				<div class="d-flex justify-content-between align-items-center">
+					<a href="#" class="header__logo">
+						<img class="logo" src="img/logo.png" alt="Tzeezotje" />
+						<img class="logo--black" src="img/logo_black.png" alt="Tzeezotje" />
+					</a>
+					<nav class="header__menu menu-container d-none d-xl-block">
+						<ul class="menu d-flex">
+							<li class="menu-item current-menu-item">
+								<a href="#">À la carte</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Wijnkaart</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Lunchmenu</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Contact</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="d-flex">
+						<div class="header__tel d-none d-md-flex mr-4">
+							<a href="tel:+3292825725" class="d-flex align-items-center">
+								<svg class="icon-call mr-2">
+									<use xlink:href="img/icons.svg#call"></use>
+								</svg>
+								<span class="t-underline">+32 9 282 57 25</span>
+							</a>
+						</div>
+						<button id="menu-btn" class="header__btn d-block d-xl-none"></button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section class="main-section d-flex color-white">
+			<div class="container d-flex align-items-center">
+				<div class="d-flex flex-column">
+					<h3 class="t-title text-uppercase text-medium mt-0 mb-4">open everyday 6am - 9pm</h3>
+					<h1 class="t-title text-mob-center mt-0 mb-5">A bad day with lunch is better than a good day without it.</h1>
+					<div class="d-flex flex-column flex-md-row justify-content-between align-items-center align-items-md-baseline">
+						<button class="t-btn main-btn mb-5 mb-md-0" data-modal="main-modal"><span>Reserve a table</span></button>
+
+						<div class="d-flex align-items-center">
+							<a href="#" class="t-circle mr-4">Fb</a>
+							<a href="#" class="t-circle mr-4">Ig</a>
+							<a href="#" class="t-circle mr-4">Tw</a>
+							<a href="#" class="t-circle">Yt</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="menu-section color-black">
+			<div class="container">
+				<div class="d-flex flex-lg-row flex-column-reverse">
+					<div class="col-lg-5">
+						<div class="dish-list">
+							<div class="dish-item">
+								<h3 class="dish-item__day t-title">Woensdag 12/01</h3>
+								<div class="dish-item__name-block">
+									<span class="dish-item__name">Salade met Serrano</span>
+									<span class="t-ellipsis"></span>
+									<span class="dish-item__name">Steak Tartaar</span>
+								</div>
+							</div>
+							<div class="dish-item">
+								<h3 class="dish-item__day t-title">Donderdag 13/01</h3>
+								<div class="dish-item__name-block">
+									<span class="dish-item__name">Toast Roquefort</span>
+									<span class="t-ellipsis"></span>
+									<span class="dish-item__name">Penne met Kip en Prei</span>
+								</div>
+							</div>
+							<div class="dish-item">
+								<h3 class="dish-item__day t-title">Vrijdag 14/01</h3>
+								<div class="dish-item__name-block">
+									<span class="dish-item__name">Verrassing van de Chef</span>
+									<span class="t-ellipsis"></span>
+									<span class="dish-item__name">Penne met Kip en Prei</span>
+								</div>
+							</div>
+							<div class="dish-item">
+								<h3 class="dish-item__day t-title">Vrijdag 15/01</h3>
+								<div class="dish-item__name-block">
+									<span class="dish-item__name">Verrassing van de Chef</span>
+									<span class="t-ellipsis"></span>
+									<span class="dish-item__name">Penne met Kip en Prei</span>
+								</div>
+							</div>
+							<div class="dish-item">
+								<h3 class="dish-item__day t-title">Vrijdag 16/01</h3>
+								<div class="dish-item__name-block">
+									<span class="dish-item__name">Verrassing van de Chef</span>
+									<span class="t-ellipsis"></span>
+									<span class="dish-item__name">Penne met Kip en Prei</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-7 mb-5 mb-lg-0">
+						<div class="t-foto-block">
+							<div class="img-wrapper">
+								<img src="img/img-2.jpg" alt="" />
+							</div>
+							<div class="img-wrapper">
+								<img src="img/img-1.jpg" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="advantages-section darck-bg">
+			<div class="container">
+				<div class="t-swiper-wrapper d-flex justify-content-center">
+					<div class="d-sm-flex d-none align-items-center">
+						<div class="t-swiper-button-prev swiper-arrow"></div>
+					</div>
+					<div class="swiper t-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide t-swiper-slide">
+								<div class="d-flex flex-column align-items-center">
+									<svg class="icon-quotes">
+										<use xlink:href="img/icons.svg#quotes"></use>
+									</svg>
+									<h3 class="t-swiper-slide__title text-center text-sbold color-secondary">
+										Goede service, lekker eten, toffe ambiance
+									</h3>
+									<p class="t-swiper-slide__text text-center color-white">
+										Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+										dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+										clita kasd gubergren.
+									</p>
+									<span class="t-swiper-slide__signature text-sbold text-uppercase color-secondary">alain heyndrickx</span>
+								</div>
+							</div>
+							<div class="swiper-slide t-swiper-slide">
+								<div class="d-flex flex-column align-items-center">
+									<svg class="icon-quotes">
+										<use xlink:href="img/icons.svg#quotes"></use>
+									</svg>
+									<h3 class="t-swiper-slide__title text-center text-sbold color-secondary">
+										Goede service, lekker eten, toffe ambiance
+									</h3>
+									<p class="t-swiper-slide__text text-center color-white">
+										Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+										dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+										clita kasd gubergren.
+									</p>
+									<span class="t-swiper-slide__signature text-sbold text-uppercase color-secondary">alain heyndrickx</span>
+								</div>
+							</div>
+							<div class="swiper-slide t-swiper-slide">
+								<div class="d-flex flex-column align-items-center">
+									<svg class="icon-quotes">
+										<use xlink:href="img/icons.svg#quotes"></use>
+									</svg>
+									<h3 class="t-swiper-slide__title text-center text-sbold color-secondary">
+										Goede service, lekker eten, toffe ambiance
+									</h3>
+									<p class="t-swiper-slide__text text-center color-white">
+										Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+										dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+										clita kasd gubergren.
+									</p>
+									<span class="t-swiper-slide__signature text-sbold text-uppercase color-secondary">alain heyndrickx</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="d-sm-flex d-none align-items-center">
+						<div class="t-swiper-button-next swiper-arrow"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="t-overlay modal-exit"></div>
+
+		<div class="mob-menu">
+			<button class="close-menu-btn close-btn"></button>
+			<nav>
+				<ul class="menu">
+					<li class="menu-item current-menu-item">
+						<a href="#">À la carte</a>
+					</li>
+					<li class="menu-item">
+						<a href="#">Wijnkaart</a>
+					</li>
+					<li class="menu-item">
+						<a href="#">Lunchmenu</a>
+					</li>
+					<li class="menu-item">
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="d-flex mb-4">
+				<a href="#">
+					<svg class="icon-vk mr-2">
+						<use xlink:href="img/icons.svg#vk"></use>
+					</svg>
+				</a>
+				<a href="#">
+					<svg class="icon-facebook mr-2">
+						<use xlink:href="img/icons.svg#facebook"></use>
+					</svg>
+				</a>
+
+				<a href="#">
+					<svg class="icon-instagram">
+						<use xlink:href="img/icons.svg#instagram"></use>
+					</svg>
+				</a>
+			</div>
+			<a href="tel:+3292825725" class="d-flex align-items-center">
+				<svg class="icon-call mr-2">
+					<use xlink:href="img/icons.svg#call"></use>
+				</svg>
+				<span class="t-underline">+32 9 282 57 25</span>
+			</a>
+
+
+		</div>
+
+		<div class="modal form-modal" id="main-modal">
+			<button class="close-btn"></button>
+			<form action="sendmail.php" class="t-form">
+				<div class="t-form__overlay">
+					<div class="dots"></div>
+				</div>
+				<div class="d-flex flex-column">
+					<h3 class="t-title mt-0 text-center">Order a call back</h3>
+					<label class="t-label mb-2" for="name">Name</label>
+					<input class="t-input mb-4 _req" type="text" id="name" placeholder="your name" />
+					<label class="t-label mb-2" for="tel">Phone number</label>
+					<input class="t-input mb-4 _req" data-phone-pattern type="text" id="phone" placeholder="your phone number" />
+					<button class="t-btn main-btn main-btn_border" type="submit"><span>Send</span></button>
+				</div>
+			</form>
+		</div>
+
+		
+
+		<script src="js/app.min.js"></script>
+
+
+	</body>
+</html>

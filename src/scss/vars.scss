@@ -1,0 +1,65 @@
+$sm: 575.98px;
+$md: 767.98px;
+$lg: 991.98px;
+$xl: 1199.98px;
+
+
+$sizes: ("sm":575.98px, "md":767.98px, "lg":991.98px, "xl":1199.98px);
+
+@mixin media($minmax, $media) {
+
+    @each $size,
+    $resolution in $sizes {
+        @if $media==$size {
+            @media only screen and (#{$minmax}-width: $resolution) {
+                @content;
+            }
+        }
+    }
+}
+
+
+
+$white: #fff;
+$red: #ee4a55;
+
+$dark: #190316;
+$black: #000;
+$dark-red: #42001c;
+$gray: #a1a1a1;
+$green: #00d100;
+$headerH: 60px;
+@include media ('min','md'){
+    $headerH: 80px;
+}
+$border-color: $dark-red;
+$bg-color: $dark;
+$tr-black: rgba(0, 0, 0, 0.75);
+
+$fz: 16px;
+$noShadow: 0px 0.6px 3px rgba(238, 74, 85, 0.0),
+0px 1.4px 7.1px rgba(238, 74, 85, 0.0),
+0px 2.6px 13.4px rgba(238, 74, 85, 0.0),
+0px 4.7px 23.9px rgba(238, 74, 85, 0.0),
+0px 8.8px 44.7px rgba(238, 74, 85, 0.0);
+$shadow:0px 0.6px 3px rgba(238, 74, 85, 0.2),
+0px 1.4px 7.1px rgba(238, 74, 85, 0.28),
+0px 2.6px 13.4px rgba(238, 74, 85, 0.35),
+0px 4.7px 23.9px rgba(238, 74, 85, 0.42),
+0px 8.8px 44.7px rgba(238, 74, 85, 0.5);
+
+$main-color: $white;
+$second-color: $red;
+$PoiretOne: 'PoiretOne', sans-serif;
+$DolomanPavljenko: 'DolomanPavljenko', sans-serif;
+$TypometryRegular: 'Typometry_Regular', serif;
+$Typometry_Alternate: 'Typometry_Alternate', serif;
+$main-font: $DolomanPavljenko;
+$second-font: $TypometryRegular;
+$second-font-2: $Typometry_Alternate;
+
+
+
+
+
+
