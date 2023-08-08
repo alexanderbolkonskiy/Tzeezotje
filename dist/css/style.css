@@ -2795,7 +2795,7 @@ h3.t-title {
 }
 
 .main-section {
-  height: 100vh;
+  min-height: 100vh;
   max-height: 1400px;
   padding: var(--header-height) 0;
 }
@@ -5198,10 +5198,6 @@ h3.t-title {
 }
 
 @media only screen and (min-width: 991.98px) {
-  .main-section {
-    min-height: 680px;
-  }
-
   .swiper-arrow {
     width: 70px;
     height: 70px;
